@@ -8,20 +8,23 @@ branches:
 
 jobs:
   include:
-    - stage: Tests
-      name: "Default (minikube with latest k8s)"
-
-    - name: "kind (latest k8s)"
-      env: CPLATFORM=kind
-
-    - name: "k3s (latest k8s)"
-      env: CPLATFORM=k3s
-
-    - name: "oc cluster (latest okd)"
-      env: CPLATFORM=oc_cluster
-
-    - name: "minishift (latest okd)"
-      env: CPLATFORM=minishift
+#    - stage: Tests
+#      name: "Default (minikube with latest k8s)"
+#
+#    - name: "kind (latest k8s)"
+#      env: CPLATFORM=kind
+#
+#    - name: "k3s (latest k8s)"
+#      env: CPLATFORM=k3s
+#
+    - name: "microk8s (latest k8s)"
+      env: CPLATFORM=microk8s
+#
+#    - name: "oc cluster (latest okd)"
+#      env: CPLATFORM=oc_cluster
+#
+#    - name: "minishift (latest okd)"
+#      env: CPLATFORM=minishift
 
 cache:
   directories:
